@@ -16,7 +16,7 @@
     define('APPROOT', dirname(dirname(__FILE__)));
 
     // URL root.
-    define('URLROOT', 'localhost/shareposts');
+    define('URLROOT', 'http://localhost/shareposts');
 
     // Site name.
     define('SITENAME', 'SharePosts');
