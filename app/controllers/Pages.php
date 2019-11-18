@@ -12,7 +12,10 @@
         public function index () {
 
             // Data.
-            $data = ['title' => 'SharePosts'];
+            $data = [
+                'title' => 'SharePosts',
+                'description' => 'Simple social network build on the JacobMVC PHP framework.'
+            ];
 
             // Render the view with the data.
             $this->view('pages/index', $data);
