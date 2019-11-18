@@ -4,20 +4,20 @@
     define('DB_HOST', 'localhost');
 
     // DB User.
-    define('DB_USER', '_YOUR_USER_');
+    define('DB_USER', 'root');
 
     // DB Password.
-    define('DB_PASS', '_YOUR_PASS_');
+    define('DB_PASS', 'JacobMVC2019');
 
     // DB Name.
-    define('DB_NAME', '_YOUR_DBNAME_');
+    define('DB_NAME', 'shareposts');
 
     // App root.
     define('APPROOT', dirname(dirname(__FILE__)));
 
     // URL root.
-    define('URLROOT', '_YOUR_URL_');
+    define('URLROOT', 'localhost/shareposts');
 
     // Site name.
-    define('SITENAME', '_YOUR_SITENAME_');
+    define('SITENAME', 'SharePosts');
 ?>

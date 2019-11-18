@@ -12,7 +12,7 @@
         public function index () {
 
             // Data.
-            $data = ['title' => 'Welcome'];
+            $data = ['title' => 'SharePosts'];
 
             // Render the view with the data.
             $this->view('pages/index', $data);
