@@ -4,7 +4,7 @@
         <div class="card card-body bg-light mt-5">
             <h2>Login in</h2>
             <p>Please fill in your credentials to login.</p>
-            <form action="<?php echo URLROOT; ?>/users/login">
+            <form action="<?php echo URLROOT;?>/users/login" method="POST">
                 <div class="form-group">
                     <label for="email">Email: <sup>*</sup></label>
                     <input 
@@ -14,7 +14,7 @@
                         value="<?php echo($data['email']); ?>"
                     />
                     <span class="invalid-feedback">
-                        <?php echo($data['name_err']) ?>
+                        <?php echo($data['email_error']) ?>
                     </span>
                 </div>
                 <div class="form-group">
@@ -26,7 +26,7 @@
                         value="<?php echo($data['password']); ?>"
                     />
                     <span class="invalid-feedback">
-                        <?php echo($data['password_err']) ?>
+                        <?php echo($data['password_error']) ?>
                     </span>
                 </div>
                 <div class="row">
