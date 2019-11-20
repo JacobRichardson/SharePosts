@@ -4,7 +4,7 @@
         <div class="card card-body bg-light mt-5">
             <h2>Create An Account </h2>
             <p>Please fill out this form to register with us.</p>
-            <form action="<?php echo URLROOT; ?>/users/register">
+            <form action="<?php echo URLROOT;?>/users/register" method="POST">
                 <div class="form-group">
                     <label for="name">Name: <sup>*</sup></label>
                     <input 
@@ -14,7 +14,7 @@
                         value="<?php echo($data['name']); ?>"
                     />
                     <span class="invalid-feedback">
-                        <?php echo($data['name_err']) ?>
+                        <?php echo($data['name_error']) ?>
                     </span>
                 </div>
                 <div class="form-group">
@@ -26,7 +26,7 @@
                         value="<?php echo($data['email']); ?>"
                     />
                     <span class="invalid-feedback">
-                        <?php echo($data['name_err']) ?>
+                        <?php echo($data['email_error']) ?>
                     </span>
                 </div>
                 <div class="form-group">
@@ -38,7 +38,7 @@
                         value="<?php echo($data['password']); ?>"
                     />
                     <span class="invalid-feedback">
-                        <?php echo($data['password_err']) ?>
+                        <?php echo($data['password_error']) ?>
                     </span>
                 </div>
                 <div class="form-group">
@@ -55,7 +55,7 @@
                 </div>
                 <div class="row">
                     <div class="col">
-                        <input type="submit" class="submit btn btn-success btn-block" vale="Register">
+                        <input type="submit" class="submit btn btn-success btn-block" value="Register">
                     </div>
                     <div class="col">
                         <a href="<?php echo URLROOT; ?>/users/login" class="btn btn-light btn-block">
