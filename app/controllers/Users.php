@@ -6,6 +6,8 @@
         // Constructor.
         public function __construct() {
             
+            // Retrieve the users model.
+            $this->userModel = $this->model('User');
         }
 
         // Register method.
@@ -34,6 +36,17 @@
 
                     // Set the email error equal to an error.
                     $data['email_error'] = 'Please enter email.';
+                }
+                // Email is not empty.
+                else {
+
+                    // If a user already exists with this email.
+                    if ($this->userModel->findUserByEmail($data['email'])) {
+                        
+                        // Set the email error equal to an error.
+                        $data['email_error'] = 'Email is already taken.';
+                    }
+
                 }
 
                 // If the name is empty.
