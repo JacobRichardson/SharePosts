@@ -63,7 +63,7 @@
                 $type = is_int($value) ? PDO::PARAM_INT : null;
 
                 // If type is an bool set it to an bool else null.
-                $type = is_bool($vaule) ? PDO::PARAM_BOOL : null;
+                $type = is_bool($value) ? PDO::PARAM_BOOL : null;
 
                 // If type is an null set it to an null else null.
                 $type = is_null($value) ? PDO::PARAM_NULL : null;
@@ -72,7 +72,7 @@
                 if (is_null($type)) {
 
                     // Default to a string.
-                    $type = PDO::PARAM_STRING;
+                    $type = PDO::PARAM_STR;
                 }
             }
 
