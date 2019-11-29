@@ -88,7 +88,20 @@
                 // If there are no errors.
                 if ( empty($data['email_error']) && empty($data['name_error']) && empty($data['password_error']) && empty($data['confirm_password_error']) ) {
 
-                   die('success!');
+                    // Hash the password.
+                    $data['password'] = password_hash($data['password'], PASSWORD_DEFAULT);
+
+                    // If registering the user was successful.
+                    if ($this->userModel->register($data)) {
+
+                        // Redirect to the login in page.
+                        redirect('users/login');
+
+                    } else {
+
+                        // End with an error message.
+                        die('something went wrong.');
+                    }
                 } 
                 // There are error(s)
                 else {
