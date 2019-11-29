@@ -11,6 +11,31 @@
             $this->db = new Database;
         }
 
+        // Register user.
+        public function register ($data) {
+
+            // Prepare the query statement.
+            $this->db->query('INSERT INTO users (name, email, password) VALUES(:name, :email, :password)');
+
+            // Bind the actual value of the data values in the SQL statement.
+            $this->db->bind(':name', $data['name']);
+            $this->db->bind(':email',$data['email']);
+            $this->db->bind(':password', $data['password']);
+
+            // If executing the statement was successful.
+            if ($this->db->execute()) {
+
+                // Return true.
+                return true;
+            } 
+            // Statement didn't execute properly.
+            else {
+
+                // Return false.
+                return false;
+            }
+        }
+
         // Find a user by email.
         public function findUserByEmail ($email) {
 
