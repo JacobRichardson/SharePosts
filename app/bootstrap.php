@@ -3,6 +3,9 @@
     // Load config.
     require_once 'config/config.php';
 
+    // Load helpers.
+    require_once 'helpers/url-redirect.php';
+
     // Autoload Core Libraries.
     spl_autoload_register(function($className) {
         
