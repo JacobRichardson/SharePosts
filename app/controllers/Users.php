@@ -94,6 +94,9 @@
                     // If registering the user was successful.
                     if ($this->userModel->register($data)) {
 
+                        // Call flash with a register success message and the message.
+                        flash('register_success', 'You are registered and can login in!');
+
                         // Redirect to the login in page.
                         redirect('users/login');
 
